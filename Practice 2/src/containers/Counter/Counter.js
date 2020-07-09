@@ -52,9 +52,9 @@ class Counter extends Component {
           clicked={this.props.onSubtractCounter}
         />
         <hr />
-        <button>Store Result</button>
+        <button onClick={this.props.onStoreResult}>Store Result</button>
         <ul>
-          <li></li>
+          <li onClick={this.props.onDeleteResult}></li>
         </ul>
       </div>
     );
