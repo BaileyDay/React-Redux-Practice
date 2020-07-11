@@ -11,6 +11,11 @@ const Ingredients = () => {
       { id: Math.random().toString(), ingredient },
     ]);
   };
+  const removeIngredienbtHandler = (ingredientID) => {
+    setUserIngredients((prevIngredients) =>
+      prevIngredients.filter((ingredient) => ingredient.id !== ingredientID)
+    );
+  };
 
   const [userIngredients, setUserIngredients] = useState([]);
   return (
@@ -19,7 +24,10 @@ const Ingredients = () => {
 
       <section>
         <Search />
-        <IngredientList ingredients={userIngredients} onRemoveItem={() => {}} />
+        <IngredientList
+          ingredients={userIngredients}
+          onRemoveItem={removeIngredienbtHandler}
+        />
       </section>
     </div>
   );
