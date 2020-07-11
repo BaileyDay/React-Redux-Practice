@@ -8,7 +8,7 @@ const Ingredients = () => {
   const addIngredientHandler = (ingredient) => {
     setUserIngredients((prevIngredients) => [
       ...prevIngredients,
-      { id: Math.random().toString, ingredient },
+      { id: Math.random().toString(), ingredient },
     ]);
   };
 
@@ -19,7 +19,7 @@ const Ingredients = () => {
 
       <section>
         <Search />
-        <IngredientList ingredients={userIngredients} />
+        <IngredientList ingredients={userIngredients} onRemoveItem={() => {}} />
       </section>
     </div>
   );
